@@ -1,5 +1,4 @@
-# prototipo-mhealth-diabetes-enf-mestrado
-# Protótipo Web mHealth — Diabetes Mellitus
+# Protótipo Sistema Web mHealth DiabEnf — Diabetes Mellitus
 
 Protótipo funcional de sistema Web destinado ao apoio à tomada de decisão do profissional enfermeiro no atendimento e acompanhamento de pessoas com **Diabetes Mellitus (DM)** no contexto da Atenção Primária à Saúde.
 
