@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Protótipo funcional de apoio à tomada de decisão do enfermeiro no cuidado à pessoa com Diabetes Mellitus na Atenção Primária à Saúde.">
+  <meta name="theme-color" content="#075985">
+  <title>Enfermagem+DM | Acesso</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#login">Ir para o acesso</a>
+  <main class="shell">
+    <section class="intro" aria-labelledby="titulo">
+      <div class="eyebrow"><span aria-hidden="true">♥</span> Atenção Primária à Saúde</div>
+      <div class="brandline"><div class="mark" aria-hidden="true">✚</div><span>Enfermagem<span>+DM</span></span></div>
+      <h1 id="titulo">Apoio à decisão de Enfermagem no cuidado à pessoa com <strong>Diabetes Mellitus</strong></h1>
+      <p class="lead">Tecnologia mHealth para apoiar a aplicação do Processo de Enfermagem, a estratificação de risco e o rastreamento de complicações, com ênfase na neuropatia diabética.</p>
+      <div class="feature-grid" aria-label="Recursos do protótipo">
+        <article><div class="icon">▤</div><h2>Processo de Enfermagem</h2><p>Fluxo estruturado para avaliação, diagnóstico, planejamento, implementação e evolução.</p></article>
+        <article><div class="icon">♙</div><h2>Neuropatia diabética</h2><p>Apoio ao rastreamento, avaliação dos pés e identificação precoce de riscos.</p></article>
+        <article><div class="icon">◫</div><h2>Estratificação de risco</h2><p>Organização do cuidado conforme dados clínicos e níveis de complexidade.</p></article>
+        <article><div class="icon">◎</div><h2>Raciocínio clínico</h2><p>Integração entre diagnósticos, resultados e intervenções de enfermagem.</p></article>
+      </div>
+      <div class="flow" aria-label="Fluxo resumido do cuidado"><span>Coleta de dados</span><b>→</b><span>Diagnósticos</span><b>→</b><span>Resultados</span><b>→</b><span>Intervenções</span><b>→</b><span>Avaliação</span></div>
+      <p class="disclaimer">Ferramenta de apoio: as recomendações do protótipo não substituem o julgamento clínico do enfermeiro.</p>
+    </section>
+
+    <aside class="access-panel" id="login" aria-labelledby="acesso-title">
+      <div class="login-card">
+        <div class="login-brand"><div class="drop" aria-hidden="true">✚</div><div><strong>Enfermagem<span>+DM</span></strong><small>Cuidado sistematizado • apoio à decisão</small></div></div>
+        <h2 id="acesso-title">Acesso ao protótipo</h2>
+        <p>Entre com suas credenciais institucionais.</p>
+        <form id="loginForm" novalidate>
+          <label for="usuario">Usuário</label>
+          <div class="field"><span aria-hidden="true">●</span><input id="usuario" name="usuario" type="text" autocomplete="username" required placeholder="Digite seu usuário"></div>
+          <label for="senha">Senha</label>
+          <div class="field"><span aria-hidden="true">◆</span><input id="senha" name="senha" type="password" autocomplete="current-password" required minlength="8" placeholder="Digite sua senha"><button class="show" type="button" id="togglePass" aria-label="Mostrar senha">Mostrar</button></div>
+          <div class="row"><label class="check"><input type="checkbox" name="lembrar"> <span>Lembrar usuário</span></label><button class="link" type="button" id="forgot">Esqueci minha senha</button></div>
+          <button class="primary" type="submit">Entrar no sistema</button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="restricted"><span aria-hidden="true">✓</span><div><strong>Acesso restrito</strong><p>Ambiente demonstrativo destinado a profissionais autorizados. Não utilize dados reais de pacientes.</p></div></div>
+        <p class="privacy">Privacidade e segurança devem ser implementadas no backend com autenticação, controle de acesso, sessão segura, logs e proteção de dados.</p>
+      </div>
+    </aside>
+  </main>
+  <footer><span>Protótipo acadêmico • Saúde Digital / mHealth</span><span>Processo de Enfermagem • Diabetes Mellitus • APS</span></footer>
+  <script>
+    const pass=document.getElementById('senha'), toggle=document.getElementById('togglePass'), status=document.getElementById('status');
+    toggle.addEventListener('click',()=>{const show=pass.type==='password';pass.type=show?'text':'password';toggle.textContent=show?'Ocultar':'Mostrar';toggle.setAttribute('aria-label',show?'Ocultar senha':'Mostrar senha')});
+    document.getElementById('forgot').addEventListener('click',()=>{status.textContent='Recuperação de senha deve ser conectada ao serviço de identidade da instituição.'});
+    document.getElementById('loginForm').addEventListener('submit',(e)=>{e.preventDefault();const u=document.getElementById('usuario'); if(!u.value.trim()||!pass.value){status.textContent='Informe usuário e senha.';return;} status.textContent='Interface demonstrativa: conecte este formulário a uma API de autenticação segura para habilitar o acesso.';});
+  </script>
+</body>
+</html>

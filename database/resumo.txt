@@ -1,0 +1,3 @@
+A pasta "database" não conterá o banco PostgreSQL propriamente dito.
+O banco ficará no servidor Web.
+Tudo necessário para criar, modificar, popular e documentar o banco.

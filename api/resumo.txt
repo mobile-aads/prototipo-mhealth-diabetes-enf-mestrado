@@ -1,0 +1,15 @@
+A pasta "api" conterá o backend desenvolvido com Django e Django REST Framework.
+
+Responsável por:
+    autenticação;
+    autorização;
+    usuários;
+    pacientes/casos;
+    avaliações;
+    regras de negócio;
+    processamento das informações;
+    apoio à decisão;
+    comunicação com PostgreSQL;
+    auditoria;
+    APIs REST;
+    segurança da aplicação.

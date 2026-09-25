@@ -1,0 +1,321 @@
+# ==========================================================
+# Protótipo mHealth Diabetes Mellitus
+# React + Django + PostgreSQL
+# Windows 11 / Ubuntu 24.04 LTS
+# ==========================================================
+
+
+# ==========================================================
+# VARIÁVEIS DE AMBIENTE / SEGREDOS
+# ==========================================================
+
+.env
+.env.*
+!.env.example
+
+*.env
+
+# Chaves e certificados privados
+*.pem
+*.key
+*.p12
+*.pfx
+
+
+# ==========================================================
+# PYTHON
+# ==========================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes virtuais locais
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribuição / build Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+
+# ==========================================================
+# DJANGO
+# ==========================================================
+
+# Logs
+*.log
+
+# Banco SQLite eventualmente criado durante testes locais
+*.sqlite3
+db.sqlite3
+
+# Arquivos enviados/gerados localmente
+media/
+
+# Arquivos estáticos coletados pelo Django
+staticfiles/
+
+# Cache
+.cache/
+
+# IMPORTANTE:
+# NÃO ignorar migrations do Django.
+# api/**/migrations/*.py deve ser versionado.
+
+
+# ==========================================================
+# TESTES / COBERTURA PYTHON
+# ==========================================================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.tox/
+.nox/
+
+
+# ==========================================================
+# TYPE CHECKING / LINT / FORMATTERS
+# ==========================================================
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+
+# ==========================================================
+# NODE / REACT
+# ==========================================================
+
+node_modules/
+
+# Builds gerados
+app/dist/
+app/build/
+
+# Cache
+.npm/
+.eslintcache
+.parcel-cache/
+.vite/
+
+# Logs Node/npm/yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Yarn
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Arquivos locais frontend
+*.local
+
+
+# ==========================================================
+# COVERAGE JAVASCRIPT
+# ==========================================================
+
+coverage/
+.nyc_output/
+
+
+# ==========================================================
+# VISUAL STUDIO CODE
+# ==========================================================
+
+# Configurações pessoais do desenvolvedor
+.vscode/
+
+# Caso futuramente a equipe decida compartilhar configurações
+# padronizadas do VS Code, substituir a regra acima por regras
+# específicas, por exemplo:
+#
+# .vscode/*
+# !.vscode/extensions.json
+# !.vscode/settings.json
+
+
+# ==========================================================
+# PYCHARM / JETBRAINS
+# ==========================================================
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+
+# ==========================================================
+# WINDOWS 11
+# ==========================================================
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+Desktop.ini
+
+$RECYCLE.BIN/
+
+*.lnk
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+
+# ==========================================================
+# LINUX / UBUNTU
+# ==========================================================
+
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# ==========================================================
+# macOS
+# Evita problemas caso futuramente alguém use macOS
+# ==========================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+._*
+
+
+# ==========================================================
+# POSTGRESQL
+# ==========================================================
+
+# Dumps/backups locais
+*.dump
+*.backup
+
+# Dumps SQL locais.
+# ATENÇÃO:
+# Caso o projeto possua scripts SQL que devam ser versionados,
+# armazene-os explicitamente em database/scripts ou database/seeds.
+*.sql
+
+# Permitir SQL oficiais do projeto
+!database/scripts/**/*.sql
+!database/seeds/**/*.sql
+!database/schemas/**/*.sql
+
+# Arquivos físicos/data directory do PostgreSQL
+pgdata/
+postgres-data/
+.postgres/
+
+
+# ==========================================================
+# BACKUPS
+# ==========================================================
+
+*.bak
+*.old
+*.orig
+*.swp
+*.swo
+
+backup/
+backups/
+
+
+# ==========================================================
+# ARQUIVOS TEMPORÁRIOS
+# ==========================================================
+
+tmp/
+temp/
+
+*.cache
+
+
+# ==========================================================
+# RELATÓRIOS / RESULTADOS GERADOS
+# ==========================================================
+
+reports/generated/
+test-results/
+playwright-report/
+
+
+# ==========================================================
+# PLAYWRIGHT / CYPRESS
+# ==========================================================
+
+playwright/.cache/
+
+cypress/videos/
+cypress/screenshots/
+
+
+# ==========================================================
+# DADOS LOCAIS / DADOS SENSÍVEIS
+# ==========================================================
+
+local-data/
+private-data/
+patient-data/
+real-data/
+
+# Nunca armazenar exportações reais de pacientes
+patients-export.*
+pacientes-export.*
+
+
+# ==========================================================
+# DOCKER - OVERRIDES LOCAIS
+# ==========================================================
+
+docker-compose.override.yml
+compose.override.yml
+
+
+# ==========================================================
+# OUTROS ARQUIVOS LOCAIS
+# ==========================================================
+
+.local/
+.local-settings/
+secrets/
+credentials/
